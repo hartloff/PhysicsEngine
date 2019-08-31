@@ -20,7 +20,7 @@ import physics.PhysicsVector
 class GameObject(var location: PhysicsVector, var dimensions: PhysicsVector) {
 
   /**
-    * Much like onGroundCalled in the DynamicObject class, the following three variables have no real
+    * Much like the testing variables in the DynamicObject class, the following three variables have no real
     * functionality, but will be used while testing objective 3 of the physics engine. When testing
     * for collisions with dynamic objects, use these variables to check if the collideWithDynamicObject
     * method was properly called

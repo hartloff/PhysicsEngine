@@ -23,6 +23,14 @@ class DynamicObject(location: PhysicsVector, dimensions: PhysicsVector) extends 
   var onGroundCalled: Boolean = false
 
   /**
+    * Like onGroundCalled, the following variables have no real functionality, but will be used while
+    * testing objective 3 of the physics engine. When testing for collisions with static objects, use
+    * these variables to check if the collideWithStaticObject method was properly called
+    */
+  var collideWithStaticObjectCalled: Boolean = false
+  var staticObject: StaticObject = _
+
+  /**
     * previousLocation is used by the physics engine and other objects to determine the movement vector of the
     * dynamic object during a particular update. This value is computed at the beginning of each update and
     * represents the location of the object before the object location was updated.
@@ -31,8 +39,6 @@ class DynamicObject(location: PhysicsVector, dimensions: PhysicsVector) extends 
     * the movement
     */
   var previousLocation = new PhysicsVector()
-
-
 
 
   /**
