@@ -59,6 +59,9 @@ class DynamicObject(location: PhysicsVector, dimensions: PhysicsVector) extends 
     *
     * @param staticObject The static object with which the object collided
     */
-  def collideWithStaticObject(staticObject: StaticObject): Unit = {}
+  def collideWithStaticObject(staticObject: StaticObject): Unit = {
+    this.collideWithStaticObjectCalled = true
+    this.staticObject = staticObject
+  }
 
 }
