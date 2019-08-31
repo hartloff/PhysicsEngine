@@ -12,7 +12,7 @@ import physics.PhysicsVector
   * Example: And object with values
   * location = (3, -10, 0)
   * dimensions = (1, 5, 4)
-  * Will occupy the area from (3, -10, 0) to (1, -5, 4)
+  * Will occupy the area from (3, -10, 0) to (4, -5, 4)
   *
   * @param location Initial location vector of the object
   * @param dimensions The size of the object
@@ -42,4 +42,7 @@ class GameObject(var location: PhysicsVector, var dimensions: PhysicsVector) {
   def collideWithDynamicObject(otherObject: DynamicObject, face: Integer): Unit = {}
 
 
+  override def toString = {
+    "Location: " + this.location + " | dimensions: " + this.dimensions
+  }
 }
