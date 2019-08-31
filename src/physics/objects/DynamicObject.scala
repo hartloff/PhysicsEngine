@@ -16,6 +16,11 @@ class DynamicObject(location: PhysicsVector, dimensions: PhysicsVector) extends 
 
   var mass: Double = 5.0
 
+  /**
+    * onGroundCalled has no real functionality, but will be used while testing the physics engine. When testing
+    * for collisions with the ground, use this variable to check if the onGround method was called
+    */
+  var onGroundCalled: Boolean = false
 
   /**
     * previousLocation is used by the physics engine and other objects to determine the movement vector of the
@@ -37,7 +42,9 @@ class DynamicObject(location: PhysicsVector, dimensions: PhysicsVector) extends 
     * Example: We will create a player class that can only jump when it's on the ground. When this method is called
     * by the physics engine we can enable the jump button
     */
-  def onGround(): Unit = {}
+  def onGround(): Unit = {
+    this.onGroundCalled = true
+  }
 
 
   /**
