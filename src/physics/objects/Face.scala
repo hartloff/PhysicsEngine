@@ -10,13 +10,11 @@ package physics.objects
   * colliding with it's top, but move through the platform when colliding with the bottom, sides, or if the player
   * is already colliding with the platform (internal)
   *
-  * Positive indicates that the object is moving in the positive direction along that axis. For example, a
-  * positiveX collision means the dynamic object is moving in the positive X direction and hit the static object
-  * on the face that facing in the negative X direction.
+  * Positive indicates the side that is facing in the positive direction along that axis.
   */
 object Face {
-  val bottom = 0 // == positiveZ
-  val top = 1 // == negativeZ
+  val bottom = 0 // == negativeZ
+  val top = 1 // == positiveZ
   val positiveX = 2
   val negativeX = 3
   val positiveY = 4
