@@ -1,4 +1,4 @@
-package physics.tests
+package tests
 
 import org.scalatest._
 import physics.PhysicsVector
